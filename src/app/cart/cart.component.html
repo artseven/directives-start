@@ -6,7 +6,9 @@
 <hr>
 
 <ul class="listgroup">
-  <li class="list-group-item" *ngFor="let item of items">
+  <li class="list-group-item"
+   *ngFor="let item of items; let i = index"
+   [ngStyle]="{backgroundColor: i % 2 === 0 ? 'lightyellow' : 'lightblue'}">
     {{ item }}
   </li>
 </ul>
