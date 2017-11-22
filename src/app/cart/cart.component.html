@@ -3,6 +3,7 @@
   (click)="onAddItem()"
   class="btn" [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem === ''}">Add Item</button>
 
+  <p *ngIf="newItem === ''">Please enter a value!</p>
 <hr>
 
 <ul class="listgroup">
